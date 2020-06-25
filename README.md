@@ -22,6 +22,6 @@ let choice = await prompt2("Please choose an option:", {type:"buttons", options:
 })();
 ```
 
-https://jsbin.com/qanojepapa/1/edit?html,output
+https://jsbin.com/nasapowodo/edit?html,output
 
 ![example](https://i.imgur.com/sa2qve2.png)
