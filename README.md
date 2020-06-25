@@ -2,7 +2,7 @@ A rough sketch of an async version of window.prompt that has a bunch of differen
 
 # Usage
 
-```
+```js
 let name = await prompt2("Please type your name:", {type:"text"});
 let pw = await prompt2("Please type your password:", {type:"password"});
 let date = await prompt2("Please choose a date:", {type:"date"});
@@ -13,7 +13,7 @@ let choice = await prompt2("Please choose an option:", {type:"buttons", options:
 
 # Demo
 
-```
+```js
 (async function() {
   window.prompt2 = await import("https://deno.land/x/gh:josephrocca:prompt2@v0.0.2/mod.js").then(m => m.default);
   let date = await prompt2("Please choose a date:", {type:"date"});
