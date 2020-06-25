@@ -1,5 +1,7 @@
 A rough sketch of an async version of window.prompt that has a bunch of different input types (date, &lt;select>, color, file, etc).
 
+https://discourse.wicg.io/t/proposal-extension-of-window-prompt-to-allow-other-types-of-common-inputs-select-date-color-password-range-file/4596
+
 # Usage
 
 ```js
