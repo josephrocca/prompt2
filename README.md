@@ -1,4 +1,4 @@
-A rough sketch of an async version of window.prompt that has a bunch of different input types (date, &lt;select>, color, file, etc).
+A rough sketch of a proposal for an async version of `window.prompt` that allows for a bunch of different input types (date, &lt;select>, color, file, etc) instead of just text.
 
 https://discourse.wicg.io/t/proposal-extension-of-window-prompt-to-allow-other-types-of-common-inputs-select-date-color-password-range-file/4596
 
@@ -22,6 +22,6 @@ let choice = await prompt2("Please choose an option:", {type:"buttons", options:
 })();
 ```
 
-https://jsbin.com/nasapowodo/edit?html,output
+https://jsbin.com/sogokawixo/1/edit?html,output
 
 ![example](https://i.imgur.com/sa2qve2.png)
