@@ -1,27 +1,17 @@
-A rough sketch of a proposal for an async version of `window.prompt` that allows for a bunch of different input types (date, &lt;select>, color, file, etc) instead of just text.
-
-https://discourse.wicg.io/t/proposal-extension-of-window-prompt-to-allow-other-types-of-common-inputs-select-date-color-password-range-file/4596
+Kind of an async version of prompt, but with a lot more features.
 
 # Usage
 
 ```js
-let name = await prompt2("Please type your name:", {type:"text"});
-let pw = await prompt2("Please type your password:", {type:"password"});
-let date = await prompt2("Please choose a date:", {type:"date"});
-let files = await prompt2("Please choose a file:", {type:"file"});
-let choice = await prompt2("Please choose an option:", {type:"select", options:[{content:"Thing 1", value:"1"}, {content:"Thing 2", value:"2"}]});
-let choice = await prompt2("Please choose an option:", {type:"buttons", options:[{content:"Thing 1", value:"1"}, {content:"Thing 2", value:"2"}]});
+let prompt2 = await import("https://cdn.jsdelivr.net/gh/josephrocca/prompt2@v0.0.4/mod.js");
+
+let results = await prompt2({
+  foo: {type:"textLine", defaultValue:"123", placeholder:"Some placeholder text"},
+  bar: {type:"text", defaultValue:"123\babc"},
+  baz: {type:"select", options:[{content:"abc", value:"123"}, {content:"xyz", value:"987"}]},
+});
+
+console.log(result.foo);
+console.log(result.bar);
+console.log(result.baz);
 ```
-
-# Demo
-
-```js
-(async function() {
-  window.prompt2 = await import("https://deno.land/x/prompt2@v0.0.3/mod.js").then(m => m.default);
-  let date = await prompt2("Please choose a date:", {type:"date"});
-})();
-```
-
-https://jsbin.com/sogokawixo/1/edit?html,output
-
-![example](https://i.imgur.com/sa2qve2.png)
