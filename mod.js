@@ -228,3 +228,4 @@ export default async function prompt2(specs, opts={}) {
   ctn.remove();
   return values;
 }
+prompt2.defaults = {};
