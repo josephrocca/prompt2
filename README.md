@@ -27,8 +27,8 @@ You can pass an options object as the second parameter to `prompt2`:
   showHiddenInputsText: "show advanced settings", // default is "Show hidden inputs"
   submitButtonText: "save", // default is "submit"
   cancelButtonText: "back", // default is "cancel"
-  backgroundColor,
-  borderRadius,
-  borderColor,
+  backgroundColor: "blue",
+  borderRadius: "3px",
+  borderColor: "red",
 }
 ```
