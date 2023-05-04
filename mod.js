@@ -229,3 +229,9 @@ export default async function prompt2(specs, opts={}) {
   return values;
 }
 prompt2.defaults = {};
+
+function sanitizeHtml(text) {
+  if(text === undefined) text = "";
+  text = text+"";
+  return text.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
