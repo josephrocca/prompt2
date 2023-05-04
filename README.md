@@ -14,6 +14,9 @@ let results = await prompt2({
   world: {infoTooltip:"You can put some longer explanation text here to supplement the `label`", ...},
   uhh: {type:"text", minHeight:"20vh", height:"fit-content", max-height:"30vh", cssText:"white-space:pre;"},
 });
+if(!result) {
+  // they clicked 'cancel'
+}
 
 console.log(result.foo);
 console.log(result.bar);
