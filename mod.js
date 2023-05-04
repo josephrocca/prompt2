@@ -1,6 +1,6 @@
 export default async function prompt2(specs, opts={}) {
 
-  if(!opts.backgroundColor) opts.backgroundColor = prompt2.defaults.backgroundColor ?? (getComputedStyle(document.body).getPropertyValue('background-color')==="rgba(0, 0, 0, 0)" ? "white" : getComputedStyle(document.body).getPropertyValue('background-color'));
+  if(!opts.backgroundColor) opts.backgroundColor = prompt2.defaults.backgroundColor ?? (getComputedStyle(document.body).getPropertyValue('background-color')==="rgba(0, 0, 0, 0)" ? "#e8e8e8" : getComputedStyle(document.body).getPropertyValue('background-color'));
   if(!opts.borderColor) opts.borderColor = prompt2.defaults.borderColor ?? "#eaeaea";
   if(!opts.borderRadius) opts.borderRadius = prompt2.defaults.borderRadius ?? "3px";
 
@@ -97,6 +97,9 @@ export default async function prompt2(specs, opts={}) {
           padding-bottom: 30px;
           -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 30px), #ffffff00 100%);
           mask-image: linear-gradient(to bottom, black calc(100% - 30px), #ffffff00 100%);
+        }
+        .promptModalInnerContainer * {
+          box-sizing: border-box;
         }
       </style>
     </div>
